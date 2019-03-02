@@ -154,7 +154,7 @@ class Compile(models.Model):
     expected_output = models.TextField(default="")
 
     def __str__(self):
-        return str(self.source_code[:10]) + str(self.language_id)
+        return str(self.source_code)
 
 
 
