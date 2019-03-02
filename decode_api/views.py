@@ -101,16 +101,24 @@ class CompileIt(APIView):
     """Compile kar ke output dega"""
 
     def post(self, request):
+
+        serializer = serializers.CompileSerializer(data = request.data)
+        source_code = serializer.data.get('source_code')
+        language_id = serializers.data.get('language_id')
+        stdin = serializers.data.get('stdin')
+        expected_output = serializers.data.get('excepted_output')
+
         import requests
         URL = "https://api.judge0.com/submissions?wait=true"
         a = request.data
+
         print(a)
         a = dict(a)
         d = {
-            "source_code" : str(a["source_code"][0]),
-            "language_id" : str(a["language_id"][0]),
-            "stdin" : str(a["stdin"][0]),
-            "expected_output" : str(a["expected_output"][0]),
+            "source_code" : source_code,
+            "language_id" : language_id,
+            "stdin" : stdin,
+            "expected_output" : expected_output,
             "number_of_runs": "1",
             "cpu_time_limit": "2",
             "cpu_extra_time": "0.5",

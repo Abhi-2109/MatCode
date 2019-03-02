@@ -42,5 +42,10 @@ class StatSerializer(serializers.ModelSerializer):
     class Meta :
         model = models.Stats
         fields = '__all__'
-        
+
+class CompileSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.Compile
+        fields = '__all__'
 

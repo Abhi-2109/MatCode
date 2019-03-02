@@ -146,5 +146,15 @@ class Stats(models.Model):
     def __str__(self):
         return str(self.user_id)
 
+class Compile(models.Model):
+    """Compile and Store the Problem"""
+    source_code = models.TextField(default="")
+    language_id =  models.CharField(max_length=2)
+    stdin = models.TextField(default="")
+    expected_output = models.TextField(default="")
+
+    def __str__(self):
+        return str(self.source_code[:10]) + str(self.language_id)
+
 
 
