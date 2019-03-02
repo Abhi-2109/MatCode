@@ -100,6 +100,10 @@ class LeaderBoardView(APIView):
 class CompileIt(APIView):
     """Compile kar ke output dega"""
 
+    def get(self,request,format = None):
+
+        return Response(models.Compile.objects.all())
+
     def post(self, request):
 
         serializer = serializers.CompileSerializer(data = request.data)
