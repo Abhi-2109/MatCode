@@ -96,3 +96,31 @@ class LeaderBoardView(APIView):
         """Return a list of top 10 leaderBoard"""
         leaderboard_data =list(models.UserProfile.objects.values('score','id','name').order_by('-score'))[:10]
         return Response(leaderboard_data)
+
+class CompileIt(APIView):
+    """Compile kar ke output dega"""
+
+    def post(self, request):
+        import requests
+        URL = "https://api.judge0.com/submissions?wait=true"
+        a = request.data
+        a = dict(a)
+        d = {
+            "source_code" : str(a["source_code"][0]),
+            "language_id" : str(a["language_id"][0]),
+            "stdin" : str(a["stdin"][0]),
+            "expected_output" : str(a["expected_output"][0]),
+            "number_of_runs": "1",
+            "cpu_time_limit": "2",
+            "cpu_extra_time": "0.5",
+            "wall_time_limit": "5",
+            "memory_limit": "128000",
+            "stack_limit": "64000",
+            "max_processes_and_or_threads": "30",
+            "enable_per_process_and_thread_time_limit": False,
+            "enable_per_process_and_thread_memory_limit": True,
+            "max_file_size": "1024"
+        }
+        r = requests.post(url=URL, data = d)
+        print(r.json())
+        return Response(r.json())
