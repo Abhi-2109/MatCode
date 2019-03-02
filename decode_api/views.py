@@ -104,6 +104,7 @@ class CompileIt(APIView):
         import requests
         URL = "https://api.judge0.com/submissions?wait=true"
         a = request.data
+        print(a)
         a = dict(a)
         d = {
             "source_code" : str(a["source_code"][0]),
