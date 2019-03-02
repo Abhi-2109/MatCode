@@ -102,7 +102,7 @@ class CompileIt(APIView):
 
     def get(self,request,format = None):
 
-        return Response(models.Compile.objects.all())
+        return Response({})
 
     def post(self, request):
 
