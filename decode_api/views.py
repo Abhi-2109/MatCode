@@ -101,8 +101,8 @@ class CompileIt(APIView):
     """Compile kar ke output dega"""
 
     def get(self,request,format = None):
-
-        return Response({})
+        data = list(models.Compile.objects.values('source_code'))
+        return Response(data)
 
     def post(self, request):
 
