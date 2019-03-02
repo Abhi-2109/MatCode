@@ -103,7 +103,7 @@ class CompileIt(APIView):
     def post(self, request):
 
         serializer = serializers.CompileSerializer(data = request.data)
-        if serializer.is_valid()
+        if serializer.is_valid():
             source_code = serializer.data.get('source_code')
             language_id = serializers.data.get('language_id')
             stdin = serializers.data.get('stdin')
