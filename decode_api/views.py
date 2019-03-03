@@ -139,4 +139,4 @@ class CompileIt(APIView):
             print(r.json())
             return Response(r.json())
         else:
-            return Response({'message' : "wrong format" })
+            return Response( serializer.errors, status = status.HTTP_400_BAD_REQUEST)
