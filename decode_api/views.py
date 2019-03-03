@@ -106,6 +106,7 @@ class CompileIt(APIView):
     def post(self, request):
 
         serializer = serializers.CompileSerializer(data = request.data)
+        print(serializer.data)
         if serializer.is_valid():
             source_code = serializer.data.get('source_code')
             language_id = serializer.data.get('language_id')
@@ -138,4 +139,4 @@ class CompileIt(APIView):
             print(r.json())
             return Response(r.json())
         else:
-            return Response({})
+            return Response({'message' : "wrong format" })
