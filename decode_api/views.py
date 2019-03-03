@@ -100,7 +100,7 @@ class LeaderBoardView(APIView):
 class CompileIt(APIView):
     """Compile kar ke output dega"""
 
-    #serializer_class = serializers.CompileSerializer
+    serializer_class = serializers.CompileSerializer
     #queryset = models.Solution.objects.all()
 
     def post(self, request):
