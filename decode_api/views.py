@@ -108,6 +108,7 @@ class CompileIt(APIView):
         serializer = serializers.CompileSerializer(data = request.data)
         #print(serializer.data)
         if serializer.is_valid():
+            print(serializer.data)
             source_code = serializer.data.get('source_code')
             language_id = serializer.data.get('language_id')
             stdin = serializer.data.get('stdin')
