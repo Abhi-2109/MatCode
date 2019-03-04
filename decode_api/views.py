@@ -107,7 +107,7 @@ class CompileIt(APIView):
         return Response({})
 
     def post(self, request):
-
+        print(request.data)
         serializer = serializers.CompileSerializer(data = request.data)
         if serializer.is_valid():
             print(serializer.data)
