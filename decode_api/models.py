@@ -149,7 +149,7 @@ class Stats(models.Model):
 class Compile(models.Model):
     """Compile and Store the Problem"""
     source_code = models.TextField(default="")
-    language_id =  models.CharField(max_length=2)
+    language_id = models.CharField(max_length=2)
     stdin = models.TextField(default="")
     expected_output = models.TextField(default="")
 

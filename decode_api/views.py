@@ -103,16 +103,18 @@ class CompileIt(APIView):
     serializer_class = serializers.CompileSerializer
     #queryset = models.Solution.objects.all()
 
+    def get(self,request, blah = None):
+        return Response({})
+
     def post(self, request):
 
         serializer = serializers.CompileSerializer(data = request.data)
-        #print(serializer.data)
         if serializer.is_valid():
             print(serializer.data)
             source_code = serializer.data.get('source_code')
             language_id = serializer.data.get('language_id')
             stdin = serializer.data.get('stdin')
-            expected_output = serializer.data.get('excepted_output')
+            expected_output = serializer.data.get('expected_output')
 
             import requests
             URL = "https://api.judge0.com/submissions?wait=true"
