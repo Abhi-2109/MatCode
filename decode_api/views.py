@@ -115,7 +115,7 @@ class CompileIt(APIView):
             language_id = serializer.data.get('language_id')
             stdin = serializer.data.get('stdin')
             expected_output = serializer.data.get('expcted_output')
-
+            print(expected_output,source_code,language_id,stdin)
             import requests
             URL = "https://api.judge0.com/submissions?wait=true"
             #a = request.data
