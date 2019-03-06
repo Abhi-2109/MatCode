@@ -50,8 +50,24 @@ class LoginViewSet(viewsets.ViewSet):
 
     def create(self,request):
         """Use the ObtainAuthToken APIView to validate and create a token"""
-
-        return ObtainAuthToken().post(request)
+        l =  ObtainAuthToken().post(request)
+        print(l)
+        print(type(l))
+        print(request.data)
+        if "non_field_errors" in l:
+            print("error tha")
+            return l
+        else:
+            da = l.data
+            m = models.UserProfile.objects.values('id','email')
+            for i in m:
+                print(i)
+                if i["email"] == dict(request.data)['username'][0]:
+                    print("Andar Gush Gye")
+                    da['id'] = i['id']
+                    print(l)
+                    break
+            return Response(da)
 
 
 
