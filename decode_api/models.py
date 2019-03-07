@@ -157,4 +157,11 @@ class Compile(models.Model):
         return str(self.source_code)
 
 
+class Template(models.Model):
 
+    """Stores the Code Template for the Language ID"""
+    language_id = models.CharField(max_length=2)
+    template_code = models.TextField(default="", null = True, blank=True)
+
+    def __str__(self):
+        return str(self.language_id)

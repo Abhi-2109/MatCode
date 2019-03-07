@@ -49,3 +49,10 @@ class CompileSerializer(serializers.ModelSerializer):
         model = models.Compile
         fields = '__all__'
 
+class TemplateSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.Template
+        fields = '__all__'
+
+

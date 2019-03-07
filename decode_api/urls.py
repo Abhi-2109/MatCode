@@ -15,6 +15,8 @@ urlpatterns = [
     url(r'^problem/$', views.ProblemApi.as_view()),
     url(r'^solution/(?P<pk>\d+)/$', views.SolutionApiDetail.as_view()),
     url(r'^solution/$', views.SolutionApi.as_view()),
+    url(r'^template/(?P<pk>\d+)/$', views.TemplateApiDetail.as_view()),
+    url(r'^template/$', views.TemplateApi.as_view()),
     url(r'^stats/(?P<pk>\d+)/$', views.StatsApiDetail.as_view()),
     url(r'^stats/$', views.StatsApi.as_view()),
     url(r'^compile/', views.CompileIt.as_view())

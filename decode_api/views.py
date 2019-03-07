@@ -106,12 +106,25 @@ class SolutionApiDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = serializers.SolutionSerializer
     queryset = models.Solution.objects.all()
 
+class TemplateApi(generics.ListCreateAPIView):
+
+    serializer_class = serializers.TemplateSerializer
+    queryset = models.Template.objects.all()
+
+class TemplateApiDetail(generics.RetrieveUpdateDestroyAPIView):
+
+    serializer_class = serializers.TemplateSerializer
+    queryset = models.Template.objects.all()
+
+
+
 class LeaderBoardView(APIView):
     """To take the top 10 scores"""
     def get(self,request,format = None):
         """Return a list of top 10 leaderBoard"""
         leaderboard_data =list(models.UserProfile.objects.values('score','id','name').order_by('-score'))[:10]
         return Response(leaderboard_data)
+
 
 class CompileIt(APIView):
     """Compile kar ke output dega"""
