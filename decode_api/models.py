@@ -162,3 +162,6 @@ class TemplateCode(models.Model):
     """Stores the Code Template for the Language ID"""
     language_id = models.CharField(max_length=2)
     template_code = models.TextField(null = True, blank=True)
+    compiler = models.CharField(max_length=256, default="")
+    time_limit = models.CharField(max_length=18, default="10 Sec")
+    memory_limit = models.CharField(max_length=20, default="150Mb")
