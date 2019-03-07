@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29baf24b-3d69-4744-976c-b3d055c78db1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/decode_api/migrations/0005_templatecode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decode_api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/decode_api/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decode_api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/decode_api/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decode_api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/decode_api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decode_api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/decode_api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decode_api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/decode_api/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/decode_api/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -37,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/decode_api/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="377">
+              <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -50,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/decode_api/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -61,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/decode_api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="347">
+              <caret line="116" column="34" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -70,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/decode_api/apps.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -78,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/decode_api/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
+            <state relative-caret-position="362">
+              <caret line="159" column="18" selection-start-line="159" selection-start-column="18" selection-end-line="159" selection-end-column="18" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -95,11 +96,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/decode_api/models.py" />
-        <option value="$PROJECT_DIR$/decode_api/serializers.py" />
-        <option value="$PROJECT_DIR$/decode_api/admin.py" />
-        <option value="$PROJECT_DIR$/decode_api/views.py" />
         <option value="$PROJECT_DIR$/decode_api/urls.py" />
+        <option value="$PROJECT_DIR$/decode_api/models.py" />
+        <option value="$PROJECT_DIR$/decode_api/views.py" />
+        <option value="$PROJECT_DIR$/decode_api/admin.py" />
+        <option value="$PROJECT_DIR$/decode_api/serializers.py" />
       </list>
     </option>
   </component>
@@ -202,45 +203,22 @@
     <entry file="file://$PROJECT_DIR$/decode_api/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/decode_api/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/decode_api/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/decode_api/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="377">
+          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/decode_api/admin.py">
+    <entry file="file://$PROJECT_DIR$/decode_api/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        <state relative-caret-position="362">
+          <caret line="159" column="18" selection-start-line="159" selection-start-column="18" selection-end-line="159" selection-end-column="18" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/decode_api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -254,6 +232,29 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/decode_api/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/decode_api/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="116" column="34" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/decode_api/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

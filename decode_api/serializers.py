@@ -52,7 +52,7 @@ class CompileSerializer(serializers.ModelSerializer):
 class TemplateSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = models.Template
+        model = models.TemplateCode
         fields = '__all__'
 
 

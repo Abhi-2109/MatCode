@@ -80,7 +80,7 @@ class ProblemApi(generics.ListCreateAPIView):
 
 class ProblemApiDetail(generics.RetrieveUpdateDestroyAPIView):
 
-    """Handles the significant IP"""
+    """Handles the significant Problem"""
 
     serializer_class = serializers.ProblemSerializer
     queryset = models.Problem.objects.all()
@@ -109,12 +109,12 @@ class SolutionApiDetail(generics.RetrieveUpdateDestroyAPIView):
 class TemplateApi(generics.ListCreateAPIView):
 
     serializer_class = serializers.TemplateSerializer
-    queryset = models.Template.objects.all()
+    queryset = models.TemplateCode.objects.all()
 
 class TemplateApiDetail(generics.RetrieveUpdateDestroyAPIView):
 
     serializer_class = serializers.TemplateSerializer
-    queryset = models.Template.objects.all()
+    queryset = models.TemplateCode.objects.all()
 
 
 
