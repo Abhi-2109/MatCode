@@ -167,3 +167,6 @@ class TemplateCode(models.Model):
     time_limit = models.CharField(max_length=18, default="10 Sec")
     memory_limit = models.CharField(max_length=20, default="150Mb")
 
+    def __str__(self):
+        return self.compiler
+
